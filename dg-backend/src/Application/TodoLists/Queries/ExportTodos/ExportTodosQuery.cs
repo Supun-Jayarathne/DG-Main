@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using dg_backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.TodoLists.Queries.ExportTodos;
+namespace DG_Backend.Application.TodoLists.Queries.ExportTodos;
 
 public record ExportTodosQuery : IRequest<ExportTodosVm>
 {

@@ -1,8 +1,8 @@
-﻿using dg_backend.WebUI.Filters;
+﻿using DG_Backend.WebUI.Filters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dg_backend.WebUI.Controllers;
+namespace DG_Backend.WebUI.Controllers;
 
 [ApiController]
 [ApiExceptionFilter]

@@ -1,6 +1,6 @@
-﻿global using dg_backend.Domain.Common;
-global using dg_backend.Domain.Entities;
-global using dg_backend.Domain.Enums;
-global using dg_backend.Domain.Events;
-global using dg_backend.Domain.Exceptions;
-global using dg_backend.Domain.ValueObjects;
+﻿global using DG_Backend.Domain.Common;
+global using DG_Backend.Domain.Entities;
+global using DG_Backend.Domain.Enums;
+global using DG_Backend.Domain.Events;
+global using DG_Backend.Domain.Exceptions;
+global using DG_Backend.Domain.ValueObjects;

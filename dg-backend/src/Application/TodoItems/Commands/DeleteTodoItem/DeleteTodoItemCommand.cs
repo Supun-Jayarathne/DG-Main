@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.Common.Exceptions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Entities;
-using dg_backend.Domain.Events;
+﻿using DG_Backend.Application.Common.Exceptions;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Entities;
+using DG_Backend.Domain.Events;
 using MediatR;
 
-namespace dg_backend.Application.TodoItems.Commands.DeleteTodoItem;
+namespace DG_Backend.Application.TodoItems.Commands.DeleteTodoItem;
 
 public record DeleteTodoItemCommand(int Id) : IRequest;
 

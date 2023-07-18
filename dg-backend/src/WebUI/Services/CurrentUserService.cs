@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
 
-using dg_backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Interfaces;
 
-namespace dg_backend.WebUI.Services;
+namespace DG_Backend.WebUI.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

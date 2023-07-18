@@ -1,9 +1,9 @@
-﻿using dg_backend.Application.Common.Exceptions;
+﻿using DG_Backend.Application.Common.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;
 
-namespace dg_backend.Application.UnitTests.Common.Exceptions;
+namespace DG_Backend.Application.UnitTests.Common.Exceptions;
 
 public class ValidationExceptionTests
 {

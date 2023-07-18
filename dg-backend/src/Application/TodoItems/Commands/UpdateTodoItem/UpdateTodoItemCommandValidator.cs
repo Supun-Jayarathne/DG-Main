@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace dg_backend.Application.TodoItems.Commands.UpdateTodoItem;
+namespace DG_Backend.Application.TodoItems.Commands.UpdateTodoItem;
 
 public class UpdateTodoItemCommandValidator : AbstractValidator<UpdateTodoItemCommand>
 {

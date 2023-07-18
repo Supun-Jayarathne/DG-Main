@@ -1,6 +1,6 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Infrastructure.Persistence;
-using dg_backend.WebUI.Services;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Infrastructure.Persistence;
+using DG_Backend.WebUI.Services;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
 using NSwag.Generation.Processors.Security;
@@ -44,7 +44,7 @@ public static class ConfigureServices
             // Add the fluent validations schema processor
             configure.SchemaProcessors.Add(fluentValidationSchemaProcessor);
 
-            configure.Title = "dg_backend API";
+            configure.Title = "DG_Backend API";
             configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
             {
                 Type = OpenApiSecuritySchemeType.ApiKey,

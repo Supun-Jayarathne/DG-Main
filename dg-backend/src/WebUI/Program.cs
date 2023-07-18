@@ -1,4 +1,4 @@
-using dg_backend.Infrastructure.Persistence;
+using DG_Backend.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 

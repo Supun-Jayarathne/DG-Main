@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.Common.Mappings;
-using dg_backend.Application.Common.Models;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Mappings;
+using DG_Backend.Application.Common.Models;
 using MediatR;
 
-namespace dg_backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace DG_Backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {

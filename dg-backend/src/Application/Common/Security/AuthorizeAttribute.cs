@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.Common.Security;
+﻿namespace DG_Backend.Application.Common.Security;
 
 /// <summary>
 /// Specifies the class this attribute is applied to requires authorization.

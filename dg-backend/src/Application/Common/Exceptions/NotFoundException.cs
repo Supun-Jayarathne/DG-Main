@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.Common.Exceptions;
+﻿namespace DG_Backend.Application.Common.Exceptions;
 
 public class NotFoundException : Exception
 {

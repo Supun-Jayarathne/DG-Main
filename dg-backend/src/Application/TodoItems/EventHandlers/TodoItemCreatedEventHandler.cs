@@ -1,8 +1,8 @@
-﻿using dg_backend.Domain.Events;
+﻿using DG_Backend.Domain.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace dg_backend.Application.TodoItems.EventHandlers;
+namespace DG_Backend.Application.TodoItems.EventHandlers;
 
 public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedEvent>
 {
@@ -15,7 +15,7 @@ public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedE
 
     public Task Handle(TodoItemCreatedEvent notification, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("dg_backend Domain Event: {DomainEvent}", notification.GetType().Name);
+        _logger.LogInformation("DG_Backend Domain Event: {DomainEvent}", notification.GetType().Name);
 
         return Task.CompletedTask;
     }

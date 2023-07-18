@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using dg_backend.Application.Common.Models;
+using DG_Backend.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.Common.Mappings;
+namespace DG_Backend.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

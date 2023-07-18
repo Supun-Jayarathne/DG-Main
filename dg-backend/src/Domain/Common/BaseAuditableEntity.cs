@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.Common;
+﻿namespace DG_Backend.Domain.Common;
 
 public abstract class BaseAuditableEntity : BaseEntity
 {

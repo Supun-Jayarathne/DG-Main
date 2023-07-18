@@ -1,5 +1,5 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Infrastructure.Persistence;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace dg_backend.Application.IntegrationTests;
+namespace DG_Backend.Application.IntegrationTests;
 
 using static Testing;
 

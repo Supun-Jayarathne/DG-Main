@@ -1,6 +1,6 @@
-﻿using dg_backend.Application.Common.Interfaces;
+﻿using DG_Backend.Application.Common.Interfaces;
 
-namespace dg_backend.Infrastructure.Services;
+namespace DG_Backend.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

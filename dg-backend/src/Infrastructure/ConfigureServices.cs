@@ -1,9 +1,9 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Infrastructure.Files;
-using dg_backend.Infrastructure.Identity;
-using dg_backend.Infrastructure.Persistence;
-using dg_backend.Infrastructure.Persistence.Interceptors;
-using dg_backend.Infrastructure.Services;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Infrastructure.Files;
+using DG_Backend.Infrastructure.Identity;
+using DG_Backend.Infrastructure.Persistence;
+using DG_Backend.Infrastructure.Persistence.Interceptors;
+using DG_Backend.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +20,7 @@ public static class ConfigureServices
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("dg_backendDb"));
+                options.UseInMemoryDatabase("DG_BackendDb"));
         }
         else
         {

@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
-using dg_backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace dg_backend.Application.Common.Behaviours;
+namespace DG_Backend.Application.Common.Behaviours;
 
 public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
@@ -45,7 +45,7 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
                 userName = await _identityService.GetUserNameAsync(userId);
             }
 
-            _logger.LogWarning("dg_backend Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
+            _logger.LogWarning("DG_Backend Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
                 requestName, elapsedMilliseconds, userId, userName, request);
         }
 

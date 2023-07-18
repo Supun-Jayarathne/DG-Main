@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.Common.Security;
-using dg_backend.Domain.Enums;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Security;
+using DG_Backend.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.TodoLists.Queries.GetTodos;
+namespace DG_Backend.Application.TodoLists.Queries.GetTodos;
 
 [Authorize]
 public record GetTodosQuery : IRequest<TodosVm>;

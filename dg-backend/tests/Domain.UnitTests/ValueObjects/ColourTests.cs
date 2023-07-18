@@ -1,9 +1,9 @@
-﻿using dg_backend.Domain.Exceptions;
-using dg_backend.Domain.ValueObjects;
+﻿using DG_Backend.Domain.Exceptions;
+using DG_Backend.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace dg_backend.Domain.UnitTests.ValueObjects;
+namespace DG_Backend.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {

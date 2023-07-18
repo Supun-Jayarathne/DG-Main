@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
-using dg_backend.Application.TodoLists.Queries.ExportTodos;
+using DG_Backend.Application.TodoLists.Queries.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace dg_backend.Infrastructure.Files.Maps;
+namespace DG_Backend.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {

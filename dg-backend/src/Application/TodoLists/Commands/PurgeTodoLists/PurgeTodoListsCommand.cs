@@ -1,8 +1,8 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.Common.Security;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Security;
 using MediatR;
 
-namespace dg_backend.Application.TodoLists.Commands.PurgeTodoLists;
+namespace DG_Backend.Application.TodoLists.Commands.PurgeTodoLists;
 
 [Authorize(Roles = "Administrator")]
 [Authorize(Policy = "CanPurge")]

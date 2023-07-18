@@ -1,6 +1,6 @@
-﻿using dg_backend.Application.Common.Models;
+﻿using DG_Backend.Application.Common.Models;
 
-namespace dg_backend.Application.Common.Interfaces;
+namespace DG_Backend.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

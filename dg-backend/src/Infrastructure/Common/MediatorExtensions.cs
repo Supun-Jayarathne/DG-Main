@@ -1,4 +1,4 @@
-﻿using dg_backend.Domain.Common;
+﻿using DG_Backend.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace MediatR;

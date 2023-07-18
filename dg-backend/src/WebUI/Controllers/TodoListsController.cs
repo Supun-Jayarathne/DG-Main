@@ -1,12 +1,12 @@
-﻿using dg_backend.Application.TodoLists.Commands.CreateTodoList;
-using dg_backend.Application.TodoLists.Commands.DeleteTodoList;
-using dg_backend.Application.TodoLists.Commands.UpdateTodoList;
-using dg_backend.Application.TodoLists.Queries.ExportTodos;
-using dg_backend.Application.TodoLists.Queries.GetTodos;
+﻿using DG_Backend.Application.TodoLists.Commands.CreateTodoList;
+using DG_Backend.Application.TodoLists.Commands.DeleteTodoList;
+using DG_Backend.Application.TodoLists.Commands.UpdateTodoList;
+using DG_Backend.Application.TodoLists.Queries.ExportTodos;
+using DG_Backend.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dg_backend.WebUI.Controllers;
+namespace DG_Backend.WebUI.Controllers;
 
 [Authorize]
 public class TodoListsController : ApiControllerBase

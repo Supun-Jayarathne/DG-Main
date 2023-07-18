@@ -1,7 +1,7 @@
-﻿using dg_backend.Application.Common.Models;
+﻿using DG_Backend.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace dg_backend.Infrastructure.Identity;
+namespace DG_Backend.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {

@@ -1,14 +1,14 @@
-﻿using dg_backend.Application.Common.Models;
-using dg_backend.Application.TodoItems.Commands.CreateTodoItem;
-using dg_backend.Application.TodoItems.Commands.DeleteTodoItem;
-using dg_backend.Application.TodoItems.Commands.UpdateTodoItem;
-using dg_backend.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using dg_backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿using DG_Backend.Application.Common.Models;
+using DG_Backend.Application.TodoItems.Commands.CreateTodoItem;
+using DG_Backend.Application.TodoItems.Commands.DeleteTodoItem;
+using DG_Backend.Application.TodoItems.Commands.UpdateTodoItem;
+using DG_Backend.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using DG_Backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
-namespace dg_backend.WebUI.Controllers;
+namespace DG_Backend.WebUI.Controllers;
 
 [Authorize]
 public class TodoItemsController : ApiControllerBase

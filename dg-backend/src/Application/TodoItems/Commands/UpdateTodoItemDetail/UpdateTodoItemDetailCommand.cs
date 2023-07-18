@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.Common.Exceptions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Entities;
-using dg_backend.Domain.Enums;
+﻿using DG_Backend.Application.Common.Exceptions;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Entities;
+using DG_Backend.Domain.Enums;
 using MediatR;
 
-namespace dg_backend.Application.TodoItems.Commands.UpdateTodoItemDetail;
+namespace DG_Backend.Application.TodoItems.Commands.UpdateTodoItemDetail;
 
 public record UpdateTodoItemDetailCommand : IRequest
 {
