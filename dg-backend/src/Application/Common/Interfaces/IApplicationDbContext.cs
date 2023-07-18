@@ -1,5 +1,4 @@
 ﻿using dg_backend.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace dg_backend.Application.Common.Interfaces;
 

@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace dg_backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿namespace dg_backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class GetTodoItemsWithPaginationQueryValidator : AbstractValidator<GetTodoItemsWithPaginationQuery>
 {

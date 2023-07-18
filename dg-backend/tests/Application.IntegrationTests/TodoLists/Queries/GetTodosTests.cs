@@ -1,8 +1,6 @@
 ﻿using dg_backend.Application.TodoLists.Queries.GetTodos;
 using dg_backend.Domain.Entities;
 using dg_backend.Domain.ValueObjects;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace dg_backend.Application.IntegrationTests.TodoLists.Queries;
 

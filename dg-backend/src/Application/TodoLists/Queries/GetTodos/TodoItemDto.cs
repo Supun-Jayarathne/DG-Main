@@ -1,10 +1,8 @@
-﻿using AutoMapper;
-using dg_backend.Application.Common.Mappings;
-using dg_backend.Domain.Entities;
+﻿using dg_backend.Domain.Entities;
 
 namespace dg_backend.Application.TodoLists.Queries.GetTodos;
 
-public class TodoItemDto : IMapFrom<TodoItem>
+public class TodoItemDto
 {
     public int Id { get; init; }
 
@@ -18,9 +16,12 @@ public class TodoItemDto : IMapFrom<TodoItem>
 
     public string? Note { get; init; }
 
-    public void Mapping(Profile profile)
+    private class Mapping : Profile
     {
-        profile.CreateMap<TodoItem, TodoItemDto>()
-            .ForMember(d => d.Priority, opt => opt.MapFrom(s => (int)s.Priority));
+        public Mapping()
+        {
+            CreateMap<TodoItem, TodoItemDto>().ForMember(d => d.Priority, 
+                opt => opt.MapFrom(s => (int)s.Priority));
+        }
     }
 }

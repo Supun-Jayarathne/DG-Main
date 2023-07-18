@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace dg_backend.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿namespace dg_backend.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public record GetWeatherForecastsQuery : IRequest<IEnumerable<WeatherForecast>>;
 

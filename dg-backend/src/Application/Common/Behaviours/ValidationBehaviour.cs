@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-using MediatR;
-using ValidationException = dg_backend.Application.Common.Exceptions.ValidationException;
+﻿using ValidationException = dg_backend.Application.Common.Exceptions.ValidationException;
 
 namespace dg_backend.Application.Common.Behaviours;
 

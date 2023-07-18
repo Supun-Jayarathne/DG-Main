@@ -1,8 +1,10 @@
-﻿namespace dg_backend.Application.TodoLists.Queries.GetTodos;
+﻿using dg_backend.Application.Common.Models;
+
+namespace dg_backend.Application.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {
-    public IReadOnlyCollection<PriorityLevelDto> PriorityLevels { get; init; } = Array.Empty<PriorityLevelDto>();
+    public IReadOnlyCollection<LookupDto> PriorityLevels { get; init; } = Array.Empty<LookupDto>();
 
     public IReadOnlyCollection<TodoListDto> Lists { get; init; } = Array.Empty<TodoListDto>();
 }

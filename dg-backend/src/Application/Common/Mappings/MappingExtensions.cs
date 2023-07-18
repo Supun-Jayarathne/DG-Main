@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using dg_backend.Application.Common.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using dg_backend.Application.Common.Models;
 
 namespace dg_backend.Application.Common.Mappings;
 
