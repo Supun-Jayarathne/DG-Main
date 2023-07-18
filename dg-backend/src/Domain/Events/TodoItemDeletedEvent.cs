@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.Events;
+﻿namespace DG_Backend.Domain.Events;
 
 public class TodoItemDeletedEvent : BaseEvent
 {

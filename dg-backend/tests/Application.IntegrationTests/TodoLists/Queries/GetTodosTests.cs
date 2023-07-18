@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.TodoLists.Queries.GetTodos;
-using dg_backend.Domain.Entities;
-using dg_backend.Domain.ValueObjects;
+﻿using DG_Backend.Application.TodoLists.Queries.GetTodos;
+using DG_Backend.Domain.Entities;
+using DG_Backend.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace dg_backend.Application.IntegrationTests.TodoLists.Queries;
+namespace DG_Backend.Application.IntegrationTests.TodoLists.Queries;
 
 using static Testing;
 

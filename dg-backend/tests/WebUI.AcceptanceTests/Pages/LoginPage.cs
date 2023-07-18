@@ -1,4 +1,4 @@
-﻿namespace dg_backend.WebUI.AcceptanceTests.Pages;
+﻿namespace DG_Backend.WebUI.AcceptanceTests.Pages;
 
 public class LoginPage : BasePage
 {

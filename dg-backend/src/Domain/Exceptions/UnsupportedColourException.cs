@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.Exceptions;
+﻿namespace DG_Backend.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {

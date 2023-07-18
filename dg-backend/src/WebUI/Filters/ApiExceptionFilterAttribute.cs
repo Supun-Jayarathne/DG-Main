@@ -1,9 +1,9 @@
-﻿using dg_backend.Application.Common.Exceptions;
+﻿using DG_Backend.Application.Common.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace dg_backend.WebUI.Filters;
+namespace DG_Backend.WebUI.Filters;
 
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {

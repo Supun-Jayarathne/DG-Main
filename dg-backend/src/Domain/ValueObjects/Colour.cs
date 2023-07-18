@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.ValueObjects;
+﻿namespace DG_Backend.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

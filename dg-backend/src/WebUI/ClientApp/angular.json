@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dg_backend.WebUI": {
+    "DG_Backend.WebUI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dg_backend.WebUI:build:production"
+              "browserTarget": "DG_Backend.WebUI:build:production"
             },
             "development": {
-              "browserTarget": "dg_backend.WebUI:build:development",
+              "browserTarget": "DG_Backend.WebUI:build:development",
               "proxyConfig": "proxy.conf.js"
             }
           },
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dg_backend.WebUI:build"
+            "browserTarget": "DG_Backend.WebUI:build"
           }
         },
         "test": {
@@ -131,7 +131,7 @@
       }
     }
   },
-  "defaultProject": "dg_backend.WebUI",
+  "defaultProject": "DG_Backend.WebUI",
   "cli": {
     "analytics": false
   }

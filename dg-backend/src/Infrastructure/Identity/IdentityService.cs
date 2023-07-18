@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.Common.Models;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Infrastructure.Identity;
+namespace DG_Backend.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {

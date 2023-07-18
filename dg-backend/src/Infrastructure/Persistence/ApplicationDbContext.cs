@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Entities;
-using dg_backend.Infrastructure.Identity;
-using dg_backend.Infrastructure.Persistence.Interceptors;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Entities;
+using DG_Backend.Infrastructure.Identity;
+using DG_Backend.Infrastructure.Persistence.Interceptors;
 using Duende.IdentityServer.EntityFramework.Options;
 using MediatR;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace dg_backend.Infrastructure.Persistence;
+namespace DG_Backend.Infrastructure.Persistence;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
 {

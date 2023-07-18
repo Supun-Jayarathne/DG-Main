@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
-using dg_backend.Application.Common.Behaviours;
-using dg_backend.Application.Common.Exceptions;
+using DG_Backend.Application.Common.Behaviours;
+using DG_Backend.Application.Common.Exceptions;
 using FluentValidation;
 using MediatR;
 

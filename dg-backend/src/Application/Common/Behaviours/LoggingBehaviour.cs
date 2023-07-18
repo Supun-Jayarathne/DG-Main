@@ -1,8 +1,8 @@
-﻿using dg_backend.Application.Common.Interfaces;
+﻿using DG_Backend.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace dg_backend.Application.Common.Behaviours;
+namespace DG_Backend.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {
@@ -28,7 +28,7 @@ public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where T
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("dg_backend Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation("DG_Backend Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, request);
     }
 }

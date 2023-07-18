@@ -1,9 +1,9 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Entities;
-using dg_backend.Domain.Events;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Entities;
+using DG_Backend.Domain.Events;
 using MediatR;
 
-namespace dg_backend.Application.TodoItems.Commands.CreateTodoItem;
+namespace DG_Backend.Application.TodoItems.Commands.CreateTodoItem;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

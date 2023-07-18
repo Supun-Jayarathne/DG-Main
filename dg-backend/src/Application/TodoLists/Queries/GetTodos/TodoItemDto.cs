@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using dg_backend.Application.Common.Mappings;
-using dg_backend.Domain.Entities;
+using DG_Backend.Application.Common.Mappings;
+using DG_Backend.Domain.Entities;
 
-namespace dg_backend.Application.TodoLists.Queries.GetTodos;
+namespace DG_Backend.Application.TodoLists.Queries.GetTodos;
 
 public class TodoItemDto : IMapFrom<TodoItem>
 {

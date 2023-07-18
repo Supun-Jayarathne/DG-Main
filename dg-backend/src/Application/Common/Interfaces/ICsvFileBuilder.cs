@@ -1,6 +1,6 @@
-﻿using dg_backend.Application.TodoLists.Queries.ExportTodos;
+﻿using DG_Backend.Application.TodoLists.Queries.ExportTodos;
 
-namespace dg_backend.Application.Common.Interfaces;
+namespace DG_Backend.Application.Common.Interfaces;
 
 public interface ICsvFileBuilder
 {

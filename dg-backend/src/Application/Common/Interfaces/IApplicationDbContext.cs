@@ -1,7 +1,7 @@
-﻿using dg_backend.Domain.Entities;
+﻿using DG_Backend.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.Common.Interfaces;
+namespace DG_Backend.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {

@@ -1,10 +1,10 @@
-﻿using dg_backend.Domain.Entities;
-using dg_backend.Infrastructure.Identity;
+﻿using DG_Backend.Domain.Entities;
+using DG_Backend.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace dg_backend.Infrastructure.Persistence;
+namespace DG_Backend.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {

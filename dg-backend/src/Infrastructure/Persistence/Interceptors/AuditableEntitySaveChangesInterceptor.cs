@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Common;
+﻿using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace dg_backend.Infrastructure.Persistence.Interceptors;
+namespace DG_Backend.Infrastructure.Persistence.Interceptors;
 
 public class AuditableEntitySaveChangesInterceptor : SaveChangesInterceptor
 {

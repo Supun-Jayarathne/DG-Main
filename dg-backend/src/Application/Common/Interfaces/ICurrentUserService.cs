@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.Common.Interfaces;
+﻿namespace DG_Backend.Application.Common.Interfaces;
 
 public interface ICurrentUserService
 {

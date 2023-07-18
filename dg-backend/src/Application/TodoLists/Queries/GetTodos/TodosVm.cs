@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.TodoLists.Queries.GetTodos;
+﻿namespace DG_Backend.Application.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {

@@ -1,4 +1,4 @@
-export const ApplicationName = 'dg_backend.WebUI';
+export const ApplicationName = 'DG_Backend.WebUI';
 
 export const ReturnUrlType = 'returnUrl';
 

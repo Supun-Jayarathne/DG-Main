@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
-using dg_backend.Application.Common.Exceptions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.Common.Security;
+using DG_Backend.Application.Common.Exceptions;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.Common.Security;
 using MediatR;
 
-namespace dg_backend.Application.Common.Behaviours;
+namespace DG_Backend.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {

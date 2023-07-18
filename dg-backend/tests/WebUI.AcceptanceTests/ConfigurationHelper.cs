@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace dg_backend.WebUI.AcceptanceTests;
+namespace DG_Backend.WebUI.AcceptanceTests;
 
 public static class ConfigurationHelper
 {

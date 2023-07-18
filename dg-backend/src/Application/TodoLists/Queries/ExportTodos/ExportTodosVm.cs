@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.TodoLists.Queries.ExportTodos;
+﻿namespace DG_Backend.Application.TodoLists.Queries.ExportTodos;
 
 public class ExportTodosVm
 {

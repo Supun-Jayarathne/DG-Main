@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Application.Common.Models;
+﻿namespace DG_Backend.Application.Common.Models;
 
 public class Result
 {

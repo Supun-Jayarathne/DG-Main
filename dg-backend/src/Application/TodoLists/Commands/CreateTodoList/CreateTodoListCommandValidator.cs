@@ -1,8 +1,8 @@
-﻿using dg_backend.Application.Common.Interfaces;
+﻿using DG_Backend.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.TodoLists.Commands.CreateTodoList;
+namespace DG_Backend.Application.TodoLists.Commands.CreateTodoList;
 
 public class CreateTodoListCommandValidator : AbstractValidator<CreateTodoListCommand>
 {

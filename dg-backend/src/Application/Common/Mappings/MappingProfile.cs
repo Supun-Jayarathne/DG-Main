@@ -1,7 +1,7 @@
 using System.Reflection;
 using AutoMapper;
 
-namespace dg_backend.Application.Common.Mappings;
+namespace DG_Backend.Application.Common.Mappings;
 
 public class MappingProfile : Profile
 {

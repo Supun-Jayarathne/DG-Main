@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.Enums;
+﻿namespace DG_Backend.Domain.Enums;
 
 public enum PriorityLevel
 {

@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
-using ValidationException = dg_backend.Application.Common.Exceptions.ValidationException;
+using ValidationException = DG_Backend.Application.Common.Exceptions.ValidationException;
 
-namespace dg_backend.Application.Common.Behaviours;
+namespace DG_Backend.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull

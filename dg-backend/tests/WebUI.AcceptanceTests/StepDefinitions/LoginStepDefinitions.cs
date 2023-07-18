@@ -1,4 +1,4 @@
-namespace dg_backend.WebUI.AcceptanceTests.StepDefinitions;
+namespace DG_Backend.WebUI.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class LoginStepDefinitions

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace dg_backend.Application.IntegrationTests;
+namespace DG_Backend.Application.IntegrationTests;
 
 using static Testing;
 

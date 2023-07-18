@@ -1,10 +1,10 @@
-﻿using dg_backend.Application.Common.Exceptions;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Domain.Entities;
+﻿using DG_Backend.Application.Common.Exceptions;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace dg_backend.Application.TodoLists.Commands.DeleteTodoList;
+namespace DG_Backend.Application.TodoLists.Commands.DeleteTodoList;
 
 public record DeleteTodoListCommand(int Id) : IRequest;
 

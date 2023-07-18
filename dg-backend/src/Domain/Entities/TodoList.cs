@@ -1,4 +1,4 @@
-﻿namespace dg_backend.Domain.Entities;
+﻿namespace DG_Backend.Domain.Entities;
 
 public class TodoList : BaseAuditableEntity
 {

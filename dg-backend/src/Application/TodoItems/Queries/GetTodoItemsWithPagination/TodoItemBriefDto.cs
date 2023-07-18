@@ -1,7 +1,7 @@
-﻿using dg_backend.Application.Common.Mappings;
-using dg_backend.Domain.Entities;
+﻿using DG_Backend.Application.Common.Mappings;
+using DG_Backend.Domain.Entities;
 
-namespace dg_backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace DG_Backend.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class TodoItemBriefDto : IMapFrom<TodoItem>
 {

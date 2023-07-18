@@ -1,5 +1,5 @@
-﻿using dg_backend.Infrastructure.Identity;
-using dg_backend.Infrastructure.Persistence;
+﻿using DG_Backend.Infrastructure.Identity;
+using DG_Backend.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Respawn;
 
-namespace dg_backend.Application.IntegrationTests;
+namespace DG_Backend.Application.IntegrationTests;
 
 [SetUpFixture]
 public partial class Testing

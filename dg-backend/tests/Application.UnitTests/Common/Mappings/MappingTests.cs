@@ -1,12 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using AutoMapper;
-using dg_backend.Application.Common.Mappings;
-using dg_backend.Application.Common.Models;
-using dg_backend.Application.TodoLists.Queries.GetTodos;
-using dg_backend.Domain.Entities;
+using DG_Backend.Application.Common.Mappings;
+using DG_Backend.Application.Common.Models;
+using DG_Backend.Application.TodoLists.Queries.GetTodos;
+using DG_Backend.Domain.Entities;
 using NUnit.Framework;
 
-namespace dg_backend.Application.UnitTests.Common.Mappings;
+namespace DG_Backend.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {

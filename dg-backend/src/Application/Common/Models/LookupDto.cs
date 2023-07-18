@@ -1,7 +1,7 @@
-﻿using dg_backend.Application.Common.Mappings;
-using dg_backend.Domain.Entities;
+﻿using DG_Backend.Application.Common.Mappings;
+using DG_Backend.Domain.Entities;
 
-namespace dg_backend.Application.Common.Models;
+namespace DG_Backend.Application.Common.Models;
 
 // Note: This is currently just used to demonstrate applying multiple IMapFrom attributes.
 public class LookupDto : IMapFrom<TodoList>, IMapFrom<TodoItem>

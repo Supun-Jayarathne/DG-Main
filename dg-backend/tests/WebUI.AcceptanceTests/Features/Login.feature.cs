@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace dg_backend.WebUI.AcceptanceTests.Features
+namespace DG_Backend.WebUI.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     using System;

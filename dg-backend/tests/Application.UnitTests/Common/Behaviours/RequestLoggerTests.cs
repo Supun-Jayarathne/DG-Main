@@ -1,11 +1,11 @@
-﻿using dg_backend.Application.Common.Behaviours;
-using dg_backend.Application.Common.Interfaces;
-using dg_backend.Application.TodoItems.Commands.CreateTodoItem;
+﻿using DG_Backend.Application.Common.Behaviours;
+using DG_Backend.Application.Common.Interfaces;
+using DG_Backend.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace dg_backend.Application.UnitTests.Common.Behaviours;
+namespace DG_Backend.Application.UnitTests.Common.Behaviours;
 
 public class RequestLoggerTests
 {

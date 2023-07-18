@@ -1,8 +1,8 @@
-﻿using dg_backend.Domain.Entities;
+﻿using DG_Backend.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace dg_backend.Infrastructure.Persistence.Configurations;
+namespace DG_Backend.Infrastructure.Persistence.Configurations;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {
