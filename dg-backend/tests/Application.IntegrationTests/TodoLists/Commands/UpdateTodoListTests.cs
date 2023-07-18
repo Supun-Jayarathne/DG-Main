@@ -2,8 +2,6 @@
 using dg_backend.Application.TodoLists.Commands.CreateTodoList;
 using dg_backend.Application.TodoLists.Commands.UpdateTodoList;
 using dg_backend.Domain.Entities;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace dg_backend.Application.IntegrationTests.TodoLists.Commands;
 
@@ -40,7 +38,7 @@ public class UpdateTodoListTests : BaseTestFixture
         (await FluentActions.Invoking(() =>
             SendAsync(command))
                 .Should().ThrowAsync<ValidationException>().Where(ex => ex.Errors.ContainsKey("Title")))
-                .And.Errors["Title"].Should().Contain("The specified title already exists.");
+                .And.Errors["Title"].Should().Contain("'Title' must be unique.");
     }
 
     [Test]

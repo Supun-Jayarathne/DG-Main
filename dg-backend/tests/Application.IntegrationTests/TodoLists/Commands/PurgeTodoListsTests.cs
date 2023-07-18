@@ -3,8 +3,6 @@ using dg_backend.Application.Common.Security;
 using dg_backend.Application.TodoLists.Commands.CreateTodoList;
 using dg_backend.Application.TodoLists.Commands.PurgeTodoLists;
 using dg_backend.Domain.Entities;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace dg_backend.Application.IntegrationTests.TodoLists.Commands;
 

@@ -1,9 +1,8 @@
-﻿using dg_backend.Application.Common.Mappings;
-using dg_backend.Domain.Entities;
+﻿using dg_backend.Domain.Entities;
 
 namespace dg_backend.Application.TodoLists.Queries.GetTodos;
 
-public class TodoListDto : IMapFrom<TodoList>
+public class TodoListDto
 {
     public TodoListDto()
     {
@@ -17,4 +16,12 @@ public class TodoListDto : IMapFrom<TodoList>
     public string? Colour { get; init; }
 
     public IReadOnlyCollection<TodoItemDto> Items { get; init; }
+
+    private class Mapping : Profile
+    {
+        public Mapping()
+        {
+            CreateMap<TodoList, TodoListDto>();
+        }
+    }
 }

@@ -1,42 +1,42 @@
-﻿using dg_backend.Application.Common.Interfaces;
-using dg_backend.Infrastructure.Persistence;
+﻿using System.Data.Common;
+using dg_backend.Application.Common.Interfaces;
+using dg_backend.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
-using Moq;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace dg_backend.Application.IntegrationTests;
 
 using static Testing;
 
-internal class CustomWebApplicationFactory : WebApplicationFactory<Program>
+public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
+    private readonly DbConnection _connection;
+
+    public CustomWebApplicationFactory(DbConnection connection)
+    {
+        _connection = connection;
+    }
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        builder.ConfigureAppConfiguration(configurationBuilder =>
-        {
-            var integrationConfig = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddEnvironmentVariables()
-                .Build();
-
-            configurationBuilder.AddConfiguration(integrationConfig);
-        });
-
-        builder.ConfigureServices((builder, services) =>
+        builder.ConfigureTestServices(services =>
         {
             services
-                .Remove<ICurrentUserService>()
-                .AddTransient(provider => Mock.Of<ICurrentUserService>(s =>
-                    s.UserId == GetCurrentUserId()));
+                .RemoveAll<IUser>()
+                .AddTransient(provider => Mock.Of<IUser>(s => s.Id == GetUserId()));
 
             services
-                .Remove<DbContextOptions<ApplicationDbContext>>()
+                .RemoveAll<DbContextOptions<ApplicationDbContext>>()
                 .AddDbContext<ApplicationDbContext>((sp, options) =>
-                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
-                        builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+                {
+                    options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
+                    options.UseSqlServer(_connection);
+                });
         });
     }
 }

@@ -1,10 +1,7 @@
-﻿using dg_backend.Application.Common.Exceptions;
-using dg_backend.Application.TodoItems.Commands.CreateTodoItem;
+﻿using dg_backend.Application.TodoItems.Commands.CreateTodoItem;
 using dg_backend.Application.TodoItems.Commands.DeleteTodoItem;
 using dg_backend.Application.TodoLists.Commands.CreateTodoList;
 using dg_backend.Domain.Entities;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace dg_backend.Application.IntegrationTests.TodoItems.Commands;
 
