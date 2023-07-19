@@ -1,4 +1,7 @@
+using Backend.Infrastructure.Identity;
 using Backend.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddWebUIServices();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
@@ -19,6 +23,8 @@ if (app.Environment.IsDevelopment())
     using (var scope = app.Services.CreateScope())
     {
         var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         await initialiser.InitialiseAsync();
         await initialiser.SeedAsync();
     }
@@ -33,24 +39,26 @@ app.UseHealthChecks("/health");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseSwaggerUi3(settings =>
-{
-    settings.Path = "/api";
-    settings.DocumentPath = "/api/specification.json";
-});
+app.UseSwagger();
+app.UseSwaggerUi3();
+//app.UseSwaggerUi3(settings =>
+//{
+//    settings.Path = "/api";
+//    settings.DocumentPath = "/api/specification.json";
+//});
 
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
+app.MapControllers();
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+//app.MapRazorPages();
 
-app.MapRazorPages();
-
-app.MapFallbackToFile("index.html");
+//app.MapFallbackToFile("index.html");
 
 app.Run();
