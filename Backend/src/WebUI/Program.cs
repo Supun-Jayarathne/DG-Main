@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddWebUIServices();
-builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
@@ -23,8 +23,8 @@ if (app.Environment.IsDevelopment())
     using (var scope = app.Services.CreateScope())
     {
         var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
-        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        //var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        //var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         await initialiser.InitialiseAsync();
         await initialiser.SeedAsync();
     }
@@ -49,16 +49,21 @@ app.UseSwaggerUi3();
 
 app.UseRouting();
 
+app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
+
 app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
-app.MapControllers();
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller}/{action=Index}/{id?}");
+//app.MapControllers();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller}/{action=Index}/{id?}");
 
-//app.MapRazorPages();
+app.MapRazorPages();
 
-//app.MapFallbackToFile("index.html");
+app.MapFallbackToFile("index.html");
 
 app.Run();
