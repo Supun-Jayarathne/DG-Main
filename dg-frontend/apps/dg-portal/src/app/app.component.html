@@ -1,2 +1,26 @@
-<dg-frontend-nx-welcome></dg-frontend-nx-welcome>
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>DesignGrid</span>
+
+  <span class="example-spacer"></span>
+
+  <span class="gap">Dashboard</span>
+  <span class="gap">Manage/Add Client</span>
+  <span class="gap">Account</span>
+  <span class="gap">Account</span>
+
+  <button mat-raised-button>Login</button>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
+//footer
+<mat-sidenav-container>
+  // your logic for header and other panel ../
+  <div class="footer" #footer>your header</div>
+</mat-sidenav-container>
