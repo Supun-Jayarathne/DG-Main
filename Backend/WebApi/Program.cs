@@ -1,10 +1,9 @@
-﻿using Backend.Api.Entities;
+﻿using Backend.Api.DbContext;
+using Backend.Api.Entities;
 using Backend.Api.Interfaces;
 using Backend.Api.Services;
 using Backend.Application;
-using Backend.Application;
 using Backend.Infrastructure;
-using JwtAuthAspNet7WebAPI.Core.DbContext;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -34,12 +33,14 @@ builder.Services.AddDbContext<IdentityDbContext>(options =>
 });
 
 // Add Identity
+
 builder.Services
     .AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<IdentityDbContext>()
     .AddDefaultTokenProviders();
 
 // Config Identity
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequiredLength = 3;
@@ -51,6 +52,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 
 // Add Authentication and JwtBearer
+
 builder.Services
     .AddAuthentication(options =>
     {
@@ -68,7 +70,7 @@ builder.Services
             ValidateAudience = true,
             ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
             ValidAudience = builder.Configuration["JWT:ValidAudience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"])),
         };
     });
 

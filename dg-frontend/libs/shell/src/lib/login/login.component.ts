@@ -45,11 +45,18 @@ export class LoginComponent implements OnInit {
       next: (res:AuthResponseDto) => {
        localStorage.setItem("token", res.message);
        this.authService.sendAuthStateChangeNotification(res.isSucceed);
+       this.authService.sendUserObjStateChange(this.getUserObject(res.message));
        this.router.navigate([this.returnUrl]);
     },
     error: (err: HttpErrorResponse) => {
       this.errorMessage = err.message;
       this.showError = true;
     }})
+  }
+
+  private getUserObject = (token: string)=>{
+    let payload = token.split(".")[1];
+        payload = window.atob(payload);
+    return JSON.parse(payload);
   }
 }

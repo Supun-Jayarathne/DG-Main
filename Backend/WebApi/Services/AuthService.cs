@@ -183,11 +183,12 @@ namespace Backend.Api.Services
         private string GenerateNewJsonWebToken(List<Claim> claims)
         {
             var authSecret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
+            
             var tokenObject = new JwtSecurityToken(
                     issuer: _configuration["JWT:ValidIssuer"],
                     audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddHours(1),
+                    //expires: DateTime.Now.AddHours(1),
+                    expires: DateTime.Now.AddMinutes(3),
                     claims: claims,
                     signingCredentials: new SigningCredentials(authSecret, SecurityAlgorithms.HmacSha256)
                 );
