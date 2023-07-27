@@ -8,22 +8,19 @@ import { AuthenticationService } from '@dg-frontend/data-access';
 })
 export class WelcomeComponent implements OnInit {
   public isUserAuthenticated: boolean | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  public userObj: any | undefined;
 
   constructor(private authService: AuthenticationService) { }
 
-  
   ngOnInit(): void {
-    console.log('NavMenuComponent');
-    const token = localStorage.getItem("token");
-    if (token) {
-      this.isUserAuthenticated = true;
-    }
     this.authService.authChanged
     .subscribe(res => {
       this.isUserAuthenticated = res;
-      console.log('isAuthenticated-MenuComponent',res);
-      
     })
-    console.log('NavMenuComponent-isUserAuthenticated',this.isUserAuthenticated);
+    this.authService.userObjChanged
+    .subscribe(res => {
+      this.userObj = res;
+    })
   }
 }

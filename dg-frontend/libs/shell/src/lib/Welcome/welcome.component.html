@@ -1,14 +1,19 @@
 <div class="wrapper">
     <div class="container">
       <!--  WELCOME  -->
-      <div id="welcome">
+      <div id="welcome" *ngIf='!isUserAuthenticated'>
         <h1>
           <span> Hello there, </span><br>
-          Welcome to DesignGrid Dashboard👋
+          Welcome to DesignGrid👋
         </h1>
-        <button *ngIf='!isUserAuthenticated' routerLink="/login" mat-raised-button>Login</button>
+        <h2>Please Login to continue...</h2>
       </div>
-    
-    
+
+      <div *ngIf='isUserAuthenticated'>
+        <h1>
+            <span> Hello {{userObj.FirstName}} {{userObj.LastName}}, </span><br>
+            Welcome to DesignGrid👋
+        </h1>
+      </div>
     </div>
   </div>
