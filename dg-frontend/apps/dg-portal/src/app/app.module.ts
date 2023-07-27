@@ -2,27 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
-import { NxDashboardComponent } from './nx-dashboard.component';
-import { AppRoutingModule } from './app.routes';
-import { ShellModule } from '@dg-frontend/shell';
+import { ShellModule, appRoutes } from '@dg-frontend/shell';
 import { DataAccessModule } from '@dg-frontend/data-access';
-
 @NgModule({
   declarations: [
-    AppComponent, 
-    NxDashboardComponent,
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
-    AppRoutingModule,
     ShellModule,
     DataAccessModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot([{path: '', children: appRoutes}], { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
