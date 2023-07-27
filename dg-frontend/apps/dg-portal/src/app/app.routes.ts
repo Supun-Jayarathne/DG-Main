@@ -1,9 +1,10 @@
 import { Route, RouterModule } from '@angular/router';
-import { NxDashboardComponent } from './nx-dashboard.component';
-import { DashboardComponent } from '../../../../libs/shell/src';
 import { NgModule } from '@angular/core';
+import { NxDashboardComponent } from './nx-dashboard.component';
+import { LoginComponent,DashboardComponent } from '@dg-frontend/shell';
 
 export const appRoutes: Route[] = [
+    { path: 'Login', component: LoginComponent },
     { path: 'dg-frontend-nx-dashboard', component: NxDashboardComponent },
     { path: 'dg-dashboard', component: DashboardComponent },
 ];

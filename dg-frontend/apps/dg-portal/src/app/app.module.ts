@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { appRoutes } from './app.routes';
-import { NxDashboardComponent } from './nx-dashboard.component';
-import { DashboardComponent } from '../../../../libs/shell/src';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { appRoutes } from './app.routes';
+import { AppComponent } from './app.component';
+import { NxDashboardComponent } from './nx-dashboard.component';
 import { AppRoutingModule } from './app.routes';
+import { ShellModule } from '@dg-frontend/shell';
+import { DataAccessModule } from '@dg-frontend/data-access';
 
 @NgModule({
   declarations: [
-    AppComponent, NxDashboardComponent, DashboardComponent
+    AppComponent, 
+    NxDashboardComponent,
   ],
   imports: [
     BrowserModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
+    HttpClientModule,
     MatSidenavModule,
     AppRoutingModule,
+    ShellModule,
+    DataAccessModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],

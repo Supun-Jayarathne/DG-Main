@@ -1,0 +1,25 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+            <a class="navbar-brand" >DesignGrid</a>
+        <button *ngIf='!isUserAuthenticated' class="btn btn-outline-success"[routerLink]="['/login']" type="button">Login</button>
+        <button *ngIf='isUserAuthenticated' class="btn btn-outline-success" type="button">Logout</button>
+        <!-- <button *ngIf='isUserAuthenticated' class="btn btn-link" style="color: #ffffff80;">Logout</button> -->
+            <!-- <ul *ngIf='!isUserAuthenticated' class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link"[routerLink]="['/authentication/login']" routerLinkActive="active" 
+                  [routerLinkActiveOptions]="{exact: true}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"[routerLink]="['/authentication/register']" routerLinkActive="active" 
+                  [routerLinkActiveOptions]="{exact: true}">Register</a>
+              </li>
+            </ul>
+            <ul *ngIf='isUserAuthenticated' class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <button class="btn btn-link" style="color: #ffffff80;">Logout</button>
+              </li>
+            </ul> -->
+
+    </div>
+</nav>
+
