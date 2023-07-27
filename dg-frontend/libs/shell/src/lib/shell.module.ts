@@ -9,12 +9,16 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './Welcome/welcome.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const appRoutes: Route[] = [
   { path: 'login', component: LoginComponent },
   { path: '**', component: WelcomeComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({
@@ -29,11 +33,14 @@ export const appRoutes: Route[] = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatSidenavModule,
+    MatRadioModule
   ],
   declarations: [
     NavMenuComponent,
     LoginComponent,
     WelcomeComponent,
+    DashboardComponent
   ],
   exports: [ NavMenuComponent, LoginComponent],
 })
