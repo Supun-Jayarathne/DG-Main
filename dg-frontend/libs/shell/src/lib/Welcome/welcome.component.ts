@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '@dg-frontend/data-access';
 
 @Component({
-  selector: 'dg-frontend-nav-menu',
-  templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css'],
+  selector: 'dg-frontend-welcome',
+  templateUrl: './welcome.component.html',
+  styleUrls: ['./welcome.component.css'],
 })
-export class NavMenuComponent implements OnInit {
+export class WelcomeComponent implements OnInit {
   public isUserAuthenticated: boolean | undefined;
 
   constructor(private authService: AuthenticationService) { }
 
+  
   ngOnInit(): void {
     console.log('NavMenuComponent');
     const token = localStorage.getItem("token");
@@ -24,10 +25,5 @@ export class NavMenuComponent implements OnInit {
       
     })
     console.log('NavMenuComponent-isUserAuthenticated',this.isUserAuthenticated);
-  }
-
-  public logout = () => {
-    localStorage.removeItem("token");
-    this.authService.sendAuthStateChangeNotification(false);
   }
 }

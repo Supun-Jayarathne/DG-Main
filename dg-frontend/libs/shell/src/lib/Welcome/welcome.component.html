@@ -6,6 +6,7 @@
           <span> Hello there, </span><br>
           Welcome to DesignGrid Dashboard👋
         </h1>
+        <button *ngIf='!isUserAuthenticated' routerLink="/login" mat-raised-button>Login</button>
       </div>
     
     
