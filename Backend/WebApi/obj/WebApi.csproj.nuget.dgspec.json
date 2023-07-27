@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Backend\\WebApi\\WebApi.csproj": {}
+    "C:\\DG-Main\\Backend\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Backend\\Application\\Application.csproj": {
+    "C:\\DG-Main\\Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\DG-Main\\Backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Backend\\Application\\Application.csproj",
+        "projectPath": "C:\\DG-Main\\Backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\SupunJayarathneBISTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Backend\\Application\\obj\\",
+        "outputPath": "C:\\DG-Main\\Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Backend\\Domain\\Domain.csproj"
+              "C:\\DG-Main\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -100,14 +100,14 @@
         }
       }
     },
-    "C:\\Backend\\Domain\\Domain.csproj": {
+    "C:\\DG-Main\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\SupunJayarathneBISTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Backend\\Domain\\obj\\",
+        "outputPath": "C:\\DG-Main\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\DG-Main\\Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\DG-Main\\Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\DG-Main\\Backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\SupunJayarathneBISTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Backend\\Infrastructure\\obj\\",
+        "outputPath": "C:\\DG-Main\\Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -185,11 +185,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Backend\\Application\\Application.csproj"
+              "C:\\DG-Main\\Backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\DG-Main\\Backend\\Application\\Application.csproj"
               },
-              "C:\\Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Backend\\Domain\\Domain.csproj"
+              "C:\\DG-Main\\Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -247,14 +247,14 @@
         }
       }
     },
-    "C:\\Backend\\WebApi\\WebApi.csproj": {
+    "C:\\DG-Main\\Backend\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backend\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\DG-Main\\Backend\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Backend\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\DG-Main\\Backend\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\SupunJayarathneBISTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Backend\\WebApi\\obj\\",
+        "outputPath": "C:\\DG-Main\\Backend\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -275,11 +275,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Backend\\Application\\Application.csproj"
+              "C:\\DG-Main\\Backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\DG-Main\\Backend\\Application\\Application.csproj"
               },
-              "C:\\Backend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Backend\\Infrastructure\\Infrastructure.csproj"
+              "C:\\DG-Main\\Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\DG-Main\\Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
