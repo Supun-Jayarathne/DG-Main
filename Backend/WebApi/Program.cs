@@ -1,4 +1,4 @@
-using Backend.Api.Entities;
+﻿using Backend.Api.Entities;
 using Backend.Api.Interfaces;
 using Backend.Api.Services;
 using Backend.Application;
@@ -112,15 +112,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("EnableCORS", builder =>
-//    {
-//        builder.AllowAnyOrigin()
-//        .AllowAnyHeader()
-//        .AllowAnyMethod();
-//    });
-//});
+app.UseCors(x => x
+          .AllowAnyOrigin()
+          .AllowAnyMethod()
+          .AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

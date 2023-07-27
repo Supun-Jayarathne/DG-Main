@@ -1,1 +1,19 @@
-<p>nav-menu works!</p>
+<mat-toolbar color="primary">
+    <!-- <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <span>DesignGrid</span>
+  
+    <span class="example-spacer"></span>
+  
+    <span class="gap" routerLink="/dashboard">Dashboard</span>
+    <span class="gap" routerLink="/addClient">Manage/Add Client</span>
+    <span class="gap" routerLink="/account">Account</span>
+  
+    <button *ngIf='!isUserAuthenticated'routerLink="/login" mat-raised-button>Login</button>
+    <button *ngIf='isUserAuthenticated' mat-raised-button>Logout</button>
+  </mat-toolbar>

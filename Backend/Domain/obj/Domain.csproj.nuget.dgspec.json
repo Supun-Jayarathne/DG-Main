@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Backend\\Domain\\Domain.csproj": {}
+    "C:\\DG-Main\\Backend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Backend\\Domain\\Domain.csproj": {
+    "C:\\DG-Main\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\DG-Main\\Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\SupunJayarathneBISTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Backend\\Domain\\obj\\",
+        "outputPath": "C:\\DG-Main\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
