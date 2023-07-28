@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Route, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,6 +15,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './Welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { ClientCardComponent } from './client-card/client-card.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { FooterComponent } from './footer/footer.component';
@@ -29,6 +32,7 @@ export const appRoutes: Route[] = [
   imports: [
     CommonModule,
     FormsModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
@@ -39,6 +43,8 @@ export const appRoutes: Route[] = [
     MatMenuModule,
     MatSidenavModule,
     MatRadioModule,
+    MatInputModule,
+    MatSelectModule
   ],
   declarations: [
     NavMenuComponent,
