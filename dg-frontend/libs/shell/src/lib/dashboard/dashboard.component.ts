@@ -1,18 +1,19 @@
 import { Component, inject } from '@angular/core';
-
-
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 
-//Form
 
 @Component({
-  selector: 'dg-frontend-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'dg-frontend-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class AppComponent {
+
+export class DashboardComponent {
   private breakpointObserver = inject(BreakpointObserver);
+
+
+
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
