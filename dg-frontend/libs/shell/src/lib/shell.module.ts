@@ -9,11 +9,12 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './Welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClientCardComponent } from './client-card/client-card.component';
 
 export const appRoutes: Route[] = [
   { path: 'login', component: LoginComponent },
@@ -34,14 +35,15 @@ export const appRoutes: Route[] = [
     MatCardModule,
     MatMenuModule,
     MatSidenavModule,
-    MatRadioModule
+    MatRadioModule,
   ],
   declarations: [
     NavMenuComponent,
     LoginComponent,
     WelcomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClientCardComponent,
   ],
-  exports: [ NavMenuComponent, LoginComponent],
+  exports: [NavMenuComponent, LoginComponent, ClientCardComponent],
 })
 export class ShellModule {}
