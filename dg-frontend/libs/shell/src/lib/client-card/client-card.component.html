@@ -1,0 +1,83 @@
+<!-- <p>client-card works!</p> -->
+<!-- Client Card Component -->
+<mat-grid-tile
+*ngFor="let card of cards | async"
+[colspan]="card.cols"
+[rowspan]="card.rows"
+>
+<mat-card class="dashboard-card">
+  <mat-card-header>
+    <mat-card-title>
+      {{ card.title }}
+      <button
+        mat-icon-button
+        class="more-button"
+        [matMenuTriggerFor]="menu"
+        aria-label="Toggle menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item>Expand</button>
+        <button mat-menu-item>Remove</button>
+      </mat-menu>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <!-- Card Content Here -->
+    <!-- Traffic Light -->
+    <div>
+      <div class="tafficlight-label">
+        <label id="tafficlight-radio-group-label">Traffic Light</label>
+      </div>
+
+      <mat-radio-group
+        aria-labelledby="tafficlight-radio-group-label"
+        class="tafficlight-radio-group"
+        [(ngModel)]="SelectedTafficLight"
+      >
+        <mat-radio-button
+          class="tafficlight-radio-button"
+          *ngFor="let season of seasons"
+          [value]="season"
+        >
+          {{ season }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Update Status -->
+    <div>
+      <div class="updatestatus-label">
+        <label id="updatestatus-radio-group-label">Update Status :</label>
+      </div>
+
+      <div class="updatestatus-textarea">
+        <!-- Type Update Status Text Here -->
+        <textarea mat-Input placeholder="Ex. 100 Main St"> </textarea>
+      </div>
+    </div>
+
+    <!-- Latest Status -->
+    <div>
+      <div class="lateststatus-label">
+        <label id="lateststatus-radio-group-label">Latest Status :</label>
+      </div>
+
+      <div class="lateststatus-textarea">
+        <!-- Latest Status Will Be Here -->
+        <textarea
+          *ngFor="let latest of lateststatus"
+          [value]="latest"
+          disabled
+        >
+         
+          {{ latest }}
+          
+        </textarea>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+</mat-grid-tile>
