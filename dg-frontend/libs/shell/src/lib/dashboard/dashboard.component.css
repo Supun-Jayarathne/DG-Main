@@ -74,6 +74,13 @@
        top: 5px;
        right: 10px;
      }
+
+     .liveview-tag {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      margin: 20px;
+    }
      
      .dashboard-card-content {
        text-align: center;
