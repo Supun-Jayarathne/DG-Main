@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
   validateControl = (controlName: string) => {
-    return this.loginForm.controls[controlName].invalid && this.loginForm.controls[controlName].touched
+    return (this.loginForm.controls[controlName].invalid && this.loginForm.controls[controlName].touched )
+    || this.loginForm.controls[controlName].value==''
   }
   hasError = (controlName: string, errorName: string) => {
     return this.loginForm.controls[controlName].hasError(errorName)
@@ -40,18 +41,20 @@ export class LoginComponent implements OnInit {
       userName: login.username,
       password: login.password
     }
-    this.authService.loginUser('api/Auth/login', userForAuth)
-    .subscribe({
-      next: (res:AuthResponseDto) => {
-       localStorage.setItem("token", res.message);
-       this.authService.sendAuthStateChangeNotification(res.isSucceed);
-       this.authService.sendUserObjStateChange(this.getUserObject(res.message));
-       this.router.navigate([this.returnUrl]);
-    },
-    error: (err: HttpErrorResponse) => {
-      this.errorMessage = err.message;
-      this.showError = true;
-    }})
+    if (login.username && login.password) { 
+      this.authService.loginUser('api/Auth/login', userForAuth)
+      .subscribe({
+        next: (res:AuthResponseDto) => {
+         localStorage.setItem("token", res.message);
+         this.authService.sendAuthStateChangeNotification(res.isSucceed);
+         this.authService.sendUserObjStateChange(this.getUserObject(res.message));
+         this.router.navigate([this.returnUrl]);
+      },
+      error: (err: HttpErrorResponse) => {
+        this.errorMessage = err.message;
+        this.showError = true;
+      }})
+    }
   }
 
   private getUserObject = (token: string)=>{
