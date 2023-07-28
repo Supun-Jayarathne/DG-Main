@@ -5,3 +5,7 @@ export * from './lib/Welcome/welcome.component';
 export * from './lib/dashboard/dashboard.component';
 
 export * from './lib/client-card/client-card.component';
+
+export * from './lib/add-client/add-client.component';
+
+export * from './lib/footer/footer.component';
