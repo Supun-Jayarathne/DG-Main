@@ -15,10 +15,13 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './Welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClientCardComponent } from './client-card/client-card.component';
+import { AddClientComponent } from './add-client/add-client.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const appRoutes: Route[] = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'addClient', component: AddClientComponent },
   { path: '**', component: WelcomeComponent },
 ];
 
@@ -43,7 +46,15 @@ export const appRoutes: Route[] = [
     WelcomeComponent,
     DashboardComponent,
     ClientCardComponent,
+    AddClientComponent,
+    FooterComponent,
   ],
-  exports: [NavMenuComponent, LoginComponent, ClientCardComponent],
+  exports: [
+    NavMenuComponent,
+    LoginComponent,
+    ClientCardComponent,
+    AddClientComponent,
+    FooterComponent,
+  ],
 })
 export class ShellModule {}

@@ -11,8 +11,8 @@
     <span class="example-spacer"></span>
   
     <span *ngIf='isUserAuthenticated' class="gap" routerLink="/dashboard">Dashboard</span>
-    <span *ngIf='isUserAuthenticated' class="gap" routerLink="/addClient">Manage/Add Client</span>
-    <span *ngIf='isUserAuthenticated' class="gap" routerLink="/account">Account</span>
+    <span *ngIf='isUserAuthenticated' class="gap" routerLink="/addClient">Add Client</span>
+    <!-- <span *ngIf='isUserAuthenticated' class="gap" routerLink="/account">Account</span> -->
   
     <button *ngIf='!isUserAuthenticated' routerLink="/login" mat-raised-button>Login</button>
     <button *ngIf='isUserAuthenticated' (click)="logout()" mat-raised-button>Logout</button>
