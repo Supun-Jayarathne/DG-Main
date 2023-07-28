@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '@dg-frontend/data-access';
 
 @Component({
@@ -10,7 +11,7 @@ export class NavMenuComponent implements OnInit {
   public isUserAuthenticated: boolean | undefined;
   public user!: object;
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService,private router: Router) { }
 
   ngOnInit(): void {
     const token = localStorage.getItem("token");
@@ -35,6 +36,7 @@ export class NavMenuComponent implements OnInit {
     localStorage.removeItem("token");
     this.authService.sendAuthStateChangeNotification(false);
     this.authService.sendUserObjStateChange({});
+    this.router.navigate(['/']);
   }
 
   private getUserObject = (token: string)=>{

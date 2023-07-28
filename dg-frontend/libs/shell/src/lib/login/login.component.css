@@ -1,7 +1,16 @@
-.card{
+.full-width {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.login-card-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 50%;
+}
+
+.login-card {
+    min-width: 400px;
+    min-height: 300px;
+    margin: 50px auto;
 }
