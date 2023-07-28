@@ -41,14 +41,14 @@
             <mat-radio-group
               aria-labelledby="tafficlight-radio-group-label"
               class="tafficlight-radio-group"
-              [(ngModel)]="SelectedTafficLight"
+              [(ngModel)]="selectedtrafficlight"
             >
               <mat-radio-button
                 class="tafficlight-radio-button"
-                *ngFor="let season of seasons"
-                [value]="season"
+                *ngFor="let trafficlight of trafficlights"
+                [value]="trafficlight"
               >
-                {{ season }}
+                {{ trafficlight }}
               </mat-radio-button>
             </mat-radio-group>
           </div>

@@ -70,8 +70,8 @@ export class DashboardComponent {
   
   title = 'dg-portal';
 
-  SelectedTafficLight: string | undefined;
-  seasons: string[] = ['Green', 'Orange', 'Red'];
+  selectedtrafficlight: string | undefined;
+  trafficlights: string[] = ['Green', 'Orange', 'Red'];
 
   lateststatus: string[] = ['This is the latest update for your project'];
 
