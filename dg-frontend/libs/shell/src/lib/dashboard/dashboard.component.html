@@ -1,52 +1,4 @@
-<!-- <div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div> -->
-
-
 <!-- Header navbar -->
-<mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>DesignGrid</span>
-
-  <span class="example-spacer"></span>
-
-  <span class="gap">Dashboard</span>
-  <span class="gap">Manage/Add Client</span>
-  <span class="gap">Account</span>
-  <span class="gap">Account</span>
-
-  <button mat-raised-button>Login</button>
-</mat-toolbar>
-
-<router-outlet></router-outlet>
-
 <!-- Content -->
 
 <div class="grid-container">
@@ -139,6 +91,3 @@
 </div>
 
 <!-- Footer -->
-<mat-sidenav-container>
-  <div class="footer" #footer>your footer</div>
-</mat-sidenav-container>
