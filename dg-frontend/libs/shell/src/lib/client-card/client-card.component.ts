@@ -2,14 +2,12 @@ import { Component, inject } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 
-
 @Component({
-  selector: 'dg-frontend-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'dg-frontend-client-card',
+  templateUrl: './client-card.component.html',
+  styleUrls: ['./client-card.component.css'],
 })
-
-export class DashboardComponent {
+export class ClientCardComponent {
   private breakpointObserver = inject(BreakpointObserver);
 
 

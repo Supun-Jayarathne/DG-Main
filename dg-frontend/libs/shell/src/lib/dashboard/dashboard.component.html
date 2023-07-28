@@ -3,6 +3,7 @@
   <h1 class="mat-h1">Hello User</h1>
 
   <mat-grid-list cols="5" rowHeight="350px">
+    <!-- Client Card Component -->
     <mat-grid-tile
       *ngFor="let card of cards | async"
       [colspan]="card.cols"
@@ -37,14 +38,14 @@
             <mat-radio-group
               aria-labelledby="tafficlight-radio-group-label"
               class="tafficlight-radio-group"
-              [(ngModel)]="favoriteSeason"
+              [(ngModel)]="selectedtrafficlight"
             >
               <mat-radio-button
                 class="tafficlight-radio-button"
-                *ngFor="let season of seasons"
-                [value]="season"
+                *ngFor="let trafficlight of trafficlights"
+                [value]="trafficlight"
               >
-                {{ season }}
+                {{ trafficlight }}
               </mat-radio-button>
             </mat-radio-group>
           </div>
@@ -84,5 +85,6 @@
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
+
   </mat-grid-list>
 </div>
