@@ -1,5 +1,5 @@
+using Application.Interfaces;
 using AutoMapper;
-using Backend.Application.Context;
 using MediatR;
 
 namespace Backend.Application.Beach.CreateBeach;
