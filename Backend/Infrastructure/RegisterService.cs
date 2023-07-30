@@ -1,4 +1,4 @@
-using Backend.Application.Context;
+using Application.Interfaces;
 using Backend.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
