@@ -18,7 +18,7 @@ public class CreateProjectStatusCommandHandler : IRequestHandler<CreateProjectSt
     public async Task<int> Handle(CreateProjectStatusRequest request, CancellationToken cancellationToken)
     {
         var newProjectStatus = _mapper.Map<ProjectStatus>(request);
-        newProjectStatus.ClientId = request.ClientId; 
+        newProjectStatus.ClientProjectId = request.ClientProjectId; 
         _dgDbContext.ProjectStatuses.Add(newProjectStatus);
         await _dgDbContext.SaveToDbAsync();
         return newProjectStatus.Id;

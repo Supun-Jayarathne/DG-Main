@@ -10,10 +10,6 @@ namespace Backend.Domain.Entities
 {
     public class ClientProject : AuditableBaseEntity
     {
-        public ClientProject()
-        {
-            ProjectStatuses = new List<ProjectStatus>();
-        }
         public string Name { get; set; }
         public string? Company { get; set; }
         public string? Email { get; set; }

@@ -41,6 +41,11 @@ public class DGDBContext : DbContext,IDGDBContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Entity<ProjectStatus>()
+        .HasOne(_ => _.ClientProject)
+        .WithMany(a => a.ProjectStatuses)
+        .HasForeignKey(p => p.ClientProjectId);
+
         //All Decimals will have 18,6 Range
         foreach (var property in builder.Model.GetEntityTypes()
         .SelectMany(t => t.GetProperties())

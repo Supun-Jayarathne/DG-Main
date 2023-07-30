@@ -32,7 +32,7 @@ public class UpdateClientProjectCommandHandler : IRequestHandler<UpdateClientPro
             {
                 var statusRequest = new CreateProjectStatusRequest();
                 statusRequest.Message = request.Message;
-                statusRequest.ClientId = request.Id;
+                statusRequest.ClientProjectId = request.Id;
 
                 await _mediator.Send(statusRequest);
             }
