@@ -1,6 +1,25 @@
-.addclientpage {   
-    align-items: center;
+.addclientpage {  
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     margin: 20px;
     text-align: center;
+}
+
+.full-width {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.addclient-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addclient-card {
+    min-width: 400px;
+    min-height: 300px;
+    margin: 50px auto;
 }
