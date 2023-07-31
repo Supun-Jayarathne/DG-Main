@@ -8,4 +8,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddClientComponent {
   addClientForm!: FormGroup;
+
+
+  // addClient = (token: string) => {
+  //   localStorage.removeItem("token");
+  //   //
+  // }
 }
