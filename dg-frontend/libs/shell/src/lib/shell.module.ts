@@ -17,14 +17,35 @@ import { WelcomeComponent } from './Welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { authGuard, loginGuard } from '@dg-frontend/shared-assets';
 import { ClientCardComponent } from './client-card/client-card.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { FooterComponent } from './footer/footer.component';
+import { LiveViewComponent } from './LiveView/live-view.component';
 
 export const appRoutes: Route[] = [
-  { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'addClient', component: AddClientComponent },
+  { 
+    path: 'login', 
+    component: LoginComponent, 
+    canActivate: [loginGuard] 
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [authGuard],
+  },
+  {
+    path: 'addClient',
+    component: AddClientComponent,
+    canActivate: [authGuard],
+  },
+  {
+    path: 'editClient/:id',
+    component: AddClientComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'liveView', component: LiveViewComponent },
+  { path: '', component: WelcomeComponent },
   { path: '**', component: WelcomeComponent },
 ];
 
@@ -44,7 +65,7 @@ export const appRoutes: Route[] = [
     MatSidenavModule,
     MatRadioModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   declarations: [
     NavMenuComponent,
@@ -54,6 +75,7 @@ export const appRoutes: Route[] = [
     ClientCardComponent,
     AddClientComponent,
     FooterComponent,
+    LiveViewComponent,
   ],
   exports: [
     NavMenuComponent,
