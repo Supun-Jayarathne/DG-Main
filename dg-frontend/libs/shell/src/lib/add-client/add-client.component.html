@@ -1,8 +1,9 @@
 <!-- Add Client Page -->
 <div class="addClientForm-container">
-<form [formGroup]="addClientForm">
+<form [formGroup]="addClientForm" (ngSubmit)="addClient(addClientForm.value)">
+<!-- <form [formGroup]="addClientForm" (ngSubmit)="addClient(addClient.value)"> -->
   <div class="addclient-wrapper">
-    <div class="addclient-section">
+    <div class="addclient-section"> 
       <mat-card-header>
         <mat-card-title ><h1 class="mat-h1">Add Client</h1></mat-card-title>
       </mat-card-header>
@@ -69,7 +70,7 @@
             <strong>Public URL is required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-checkbox class="archive-checked">Archive Client</mat-checkbox>
+        <mat-checkbox formControlName="isActive" class="archive-checked">Archive Client</mat-checkbox>
       </mat-card-content>
 
       <mat-card-actions>
