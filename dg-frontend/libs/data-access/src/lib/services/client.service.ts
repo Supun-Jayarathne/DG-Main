@@ -1,31 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserForAuthenticationDto } from '@dg-frontend/data-access';
+import { clientProjectDto } from '../interfaces/clientProjectDto.interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
+  BaseUrl="https://localhost:7212"
 
 
   constructor( private http:HttpClient) { }
 
-  // getClients(): Observable<any[]> {
-  //   return this.http.get<any[]>(`${this.apiUrl}/posts`);
-  // }
+  public addClientProject = (body: clientProjectDto) => {
+    return this.http.post<number>(this.createCompleteRoute(`${this.BaseUrl}`, "ClientProject"), body);
+  }
 
-  // getClientById(id: number): Observable<any> {
-  //   return this.http.get<any>(`${this.apiUrl}/posts/${id}`);
-  // }
+  private createCompleteRoute = (envAddress: string, route: string) => {
+    return `${envAddress}/${route}`;
+  }
 
   // addClient(post: any): Observable<any> {
-  //   return this.http.post<any>(`${this.apiUrl}/posts`, post);
+  //   return this.http.post<any>(`${this.apiUrl}/clients`, post);
   // }
 
-  // updateClient(id: number, post: any): Observable<any> {
-  //   return this.http.put<any>(`${this.apiUrl}/posts/${id}`, post);
-  // }
-
-  // deleteClient(id: number): Observable<any> {
-  //   return this.http.delete<any>(`${this.apiUrl}/posts/${id}`);
-  // }
 }
