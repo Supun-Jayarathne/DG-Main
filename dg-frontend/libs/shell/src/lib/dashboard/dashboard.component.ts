@@ -15,7 +15,35 @@ export class DashboardComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
 
 
-  constructor(private router: Router,private clientProjectService: ClientProjectService) { }
+  constructor(private router: Router,
+    private clientProjectService: ClientProjectService
+    ) { }
+
+  ngOnInit(): void {
+    this.getAllClientProjects()
+   }
+ 
+   getAllClientProjects() {
+     this.clientProjectService.getClientProjects()
+     .subscribe({
+       next: (res: any) => {
+         console.log(res);
+       },
+       error: (error: any) => {
+         console.log(error);
+       },
+       complete: () => {
+         console.log('Request complete');
+       }
+     });
+   }
+ 
+   public onRoute=()=> {
+     this.router.navigate(
+       ['/liveView'],
+       { queryParams: { name: 'Tafi' } }
+     );
+   }
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -70,37 +98,8 @@ export class DashboardComponent implements OnInit {
     })
   );
   
-  title = 'dg-portal';
-
   selectedtrafficlight: string | undefined;
   trafficlights: string[] = ['Green', 'Orange', 'Red'];
 
   lateststatus: string[] = ['This is the latest update for your project'];
-
-  ngOnInit(): void {
-   this.getAllClientProjects()
-  }
-
-  getAllClientProjects() {
-    this.clientProjectService.getClientProjects()
-    .subscribe({
-      next: (res: any) => {
-        console.log(res);
-        // this.weatherData = res;
-      },
-      error: (error: any) => {
-        console.log(error);
-      },
-      complete: () => {
-        console.log('Request complete');
-      }
-    });
-  }
-
-  public onRoute=()=> {
-    this.router.navigate(
-      ['/liveView'],
-      { queryParams: { name: 'Tafi' } }
-    );
-  }
 }

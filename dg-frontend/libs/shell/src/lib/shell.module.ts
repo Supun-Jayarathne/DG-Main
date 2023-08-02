@@ -85,6 +85,7 @@ export const appRoutes: Route[] = [
     ClientCardComponent,
     AddClientComponent,
     FooterComponent,
+    DashboardComponent,
   ],
 })
 export class ShellModule {}

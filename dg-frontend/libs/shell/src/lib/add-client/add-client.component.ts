@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ClientService } from '@dg-frontend/data-access';
+import { ClientProjectService } from '@dg-frontend/data-access';
 import { clientProjectDto } from 'libs/data-access/src/lib/interfaces/clientProjectDto.interfaces';
 
 @Component({
@@ -14,7 +14,7 @@ export class AddClientComponent {
   addClientForm!: FormGroup;
 
   constructor(
-    private clientService: ClientService,
+    private clientProjectService: ClientProjectService,
     private route: ActivatedRoute
   ) {}
 
@@ -24,7 +24,7 @@ export class AddClientComponent {
       company: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
       url: new FormControl('', [Validators.required]),
-      active: new FormControl('', [Validators.required]),
+      active: new FormControl(false, [Validators.required]),
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
@@ -41,13 +41,10 @@ export class AddClientComponent {
       
     }
 
-    console.log('add fsdfsd', add);
-
-    this.clientService.addClientProject(clientProjectObject).subscribe({
+    this.clientProjectService.addClientProject(clientProjectObject).subscribe({
       next: (res: any) => {
         console.log(res);
 
-        // this.weatherData = res;
       },
 
       error: (error: any) => {
@@ -58,12 +55,5 @@ export class AddClientComponent {
         console.log('Request complete');
       },
     });
-
-    // if (add.name || add.company || add.email) {
-    //   //
-    // }
-    // if (add.email) {
-    //   //
-    // }
   };
 }

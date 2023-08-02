@@ -8,7 +8,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { AppComponent } from './app.component';
 import { ShellModule, appRoutes } from '@dg-frontend/shell';
 import { DataAccessModule } from '@dg-frontend/data-access';
-import { AuthInterceptor } from '@dg-frontend/shared-assets';
+import { AuthInterceptor, SharedAssetsModule } from '@dg-frontend/shared-assets';
 
 export function tokenGetter() { 
   return localStorage.getItem("token"); 
@@ -24,6 +24,7 @@ export function tokenGetter() {
     ReactiveFormsModule,
     MatSidenavModule,
     ShellModule,
+    SharedAssetsModule,
     DataAccessModule,
     RouterModule.forRoot([{path: '', children: appRoutes}], { initialNavigation: 'enabledBlocking' }),
     JwtModule.forRoot({
