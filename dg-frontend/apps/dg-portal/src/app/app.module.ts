@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtModule } from "@auth0/angular-jwt";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AppComponent } from './app.component';
 import { ShellModule, appRoutes } from '@dg-frontend/shell';
 import { DataAccessModule } from '@dg-frontend/data-access';
+import { AuthInterceptor } from '@dg-frontend/shared-assets';
 
 export function tokenGetter() { 
   return localStorage.getItem("token"); 
@@ -33,7 +34,11 @@ export function tokenGetter() {
       }
     })
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

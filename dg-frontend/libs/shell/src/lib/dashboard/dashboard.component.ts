@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ClientProjectService } from '@dg-frontend/data-access';
 
 
 @Component({
@@ -10,11 +11,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private clientProjectService: ClientProjectService) { }
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -76,6 +77,25 @@ export class DashboardComponent {
 
   lateststatus: string[] = ['This is the latest update for your project'];
 
+  ngOnInit(): void {
+   this.getAllClientProjects()
+  }
+
+  getAllClientProjects() {
+    this.clientProjectService.getClientProjects()
+    .subscribe({
+      next: (res: any) => {
+        console.log(res);
+        // this.weatherData = res;
+      },
+      error: (error: any) => {
+        console.log(error);
+      },
+      complete: () => {
+        console.log('Request complete');
+      }
+    });
+  }
 
   public onRoute=()=> {
     this.router.navigate(
