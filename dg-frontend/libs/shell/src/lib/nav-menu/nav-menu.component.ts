@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { AuthenticationService } from '@dg-frontend/data-access';
 
 @Component({
@@ -11,21 +12,25 @@ export class NavMenuComponent implements OnInit {
   public isUserAuthenticated: boolean | undefined;
   public user!: object;
 
-  constructor(private authService: AuthenticationService,private router: Router) { }
+  constructor(
+    private authService: AuthenticationService,
+    private router: Router,
+    private jwtHelper: JwtHelperService) { }
 
   ngOnInit(): void {
     const token = localStorage.getItem("token");
     if (token) {
       this.user = this.getUserObject(token);
-      if (this.tokenExpired(token)) {
-        this.isUserAuthenticated = false;
-        this.authService.sendAuthStateChangeNotification(false);
-      } else {
+      if (token && !this.jwtHelper.isTokenExpired(token)) {
         this.isUserAuthenticated = true;
         this.authService.sendAuthStateChangeNotification(true);
         this.authService.sendUserObjStateChange(this.user);
+      } else {
+        this.isUserAuthenticated = false;
+        this.authService.sendAuthStateChangeNotification(false);
       }
     }
+
     this.authService.authChanged
     .subscribe(res => {
       this.isUserAuthenticated = res;
@@ -40,13 +45,8 @@ export class NavMenuComponent implements OnInit {
   }
 
   private getUserObject = (token: string)=>{
-    let payload = token.split(".")[1];
-        payload = window.atob(payload);
-    return JSON.parse(payload);
-  }
-
-  private tokenExpired(token: string) {
-    const expiry = (JSON.parse(atob(token.split('.')[1]))).exp;
-    return (Math.floor((new Date).getTime() / 1000)) >= expiry;
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token);
+    return decodedToken;
   }
 }

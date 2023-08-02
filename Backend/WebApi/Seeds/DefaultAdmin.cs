@@ -10,7 +10,7 @@ using Backend.Api.Entities;
 
 namespace Infrastructure.Identity.Seeds
 {
-    public static class DefaultSuperAdmin
+    public static class DefaultAdmin
     {
         public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {

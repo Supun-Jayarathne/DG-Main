@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class DashboardComponent {
   private breakpointObserver = inject(BreakpointObserver);
 
 
-
+  constructor(private router: Router) { }
 
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -76,4 +77,10 @@ export class DashboardComponent {
   lateststatus: string[] = ['This is the latest update for your project'];
 
 
+  public onRoute=()=> {
+    this.router.navigate(
+      ['/liveView'],
+      { queryParams: { name: 'Tafi' } }
+    );
+  }
 }
