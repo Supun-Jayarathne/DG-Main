@@ -12,8 +12,9 @@ export class ClientService {
 
   constructor( private http:HttpClient) { }
 
-  public addClientProject = (body: clientProjectDto) => {
-    return this.http.post<number>(this.createCompleteRoute(`${this.BaseUrl}`, "ClientProject"), body);
+  public addClientProject = (payload: clientProjectDto) => {
+    console.log("body :",payload)
+    return this.http.post<number>(this.createCompleteRoute(`${this.BaseUrl}`, "ClientProject"), payload);
   }
 
   private createCompleteRoute = (envAddress: string, route: string) => {

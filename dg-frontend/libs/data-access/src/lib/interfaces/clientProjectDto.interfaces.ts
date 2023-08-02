@@ -4,6 +4,6 @@ export interface clientProjectDto {
     email: string;
     url: string;
     active: boolean;
-    trafficStatus: number;
-    isUpdatedRequested : boolean;
+    trafficStatus?: number;
+    isUpdatedRequested? : boolean;
 }

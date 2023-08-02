@@ -14,7 +14,7 @@
           <input
             matInput
             placeholder="Name"
-            formControlName="clientName"
+            formControlName="name"
             type="text"
           />
           <mat-error>
@@ -62,7 +62,7 @@
           <input
             matInput
             placeholder="Public URL"
-            formControlName="publicUrl"
+            formControlName="url"
             type="url"
             appearance="outline"
           />
@@ -70,7 +70,7 @@
             <strong>Public URL is required</strong>
           </mat-error>
         </mat-form-field>
-        <mat-checkbox formControlName="isActive" class="archive-checked">Archive Client</mat-checkbox>
+        <mat-checkbox formControlName="active" class="archive-checked">Archive Client</mat-checkbox>
       </mat-card-content>
 
       <mat-card-actions>

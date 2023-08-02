@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ClientService } from '@dg-frontend/data-access';
+import { clientProjectDto } from 'libs/data-access/src/lib/interfaces/clientProjectDto.interfaces';
 
 @Component({
   selector: 'dg-frontend-add-client',
@@ -19,11 +20,11 @@ export class AddClientComponent {
 
   ngOnInit(): void {
     this.addClientForm = new FormGroup({
-      clientName: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required]),
       company: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
-      publicUrl: new FormControl('', [Validators.required]),
-      isActive: new FormControl('', [Validators.required]),
+      url: new FormControl('', [Validators.required]),
+      active: new FormControl('', [Validators.required]),
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
@@ -31,10 +32,18 @@ export class AddClientComponent {
   addClient = (addClientFormValue: any) => {
     //this.showError = false;
     const add = { ...addClientFormValue };
+    const clientProjectObject: clientProjectDto = {
+      name: add.name,
+      company: add.company,
+      email: add.email,
+      url: add.url,
+      active: add.active,
+      
+    }
 
     console.log('add fsdfsd', add);
 
-    this.clientService.addClientProject(add).subscribe({
+    this.clientService.addClientProject(clientProjectObject).subscribe({
       next: (res: any) => {
         console.log(res);
 
