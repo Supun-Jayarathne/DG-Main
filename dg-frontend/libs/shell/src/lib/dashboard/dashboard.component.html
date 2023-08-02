@@ -14,7 +14,8 @@
           <mat-card-title>
             {{ card.title }}
             <div class="liveview-tag"> 
-              <h6><a href="#" style="color:#000000;"> Live View </a> </h6>
+              <h6><a (click)="onRoute()" style="color:#000000;"> Live View </a> </h6>
+              <!-- <h6><a [routerLink]="['/liveView', 1]" style="color:#000000;"> Live View </a> </h6> -->
             </div>
           </mat-card-title>
         </mat-card-header>
